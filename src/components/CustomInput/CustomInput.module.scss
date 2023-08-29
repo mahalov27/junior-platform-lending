@@ -1,0 +1,72 @@
+@use "../../utils/variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: calc(100vw / 1920 * 7);
+  margin-bottom: calc(100vw / 1920 * 15);
+  width: 100%;
+  @media (min-width: 1920px) {
+    margin-bottom: 15px;
+    gap: 7px;
+  }
+  @media (max-width: 820px) {
+    gap: calc(100vw / 820 * 7);
+  }
+  @media (max-width: 412px) {
+    gap: calc(100vw / 412 * 8);
+  }
+  .title {
+    font-family: "Raleway";
+    font-size: calc(100vw / 1920 * 14);
+    font-weight: 400;
+    line-height: calc(100vw / 1920 * 14);
+    @media (min-width: 1920px) {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    @media (max-width: 820px) {
+      font-size: calc(100vw / 820 * 14);
+    }
+    @media (max-width: 412px) {
+      font-size: calc(100vw / 412 * 14);
+    }
+  }
+  .error{
+    color: red;
+  }
+  .inputWrapper {
+    position: relative;
+
+    input {
+      font-family: "Raleway";
+      width: 100%;
+      height: calc(100vw / 1920 * 46);
+      padding: calc(100vw / 1920 * 15);
+      border-radius: calc(100vw / 1920 * 12);
+      font-size:calc(100vw / 1920 * 14); 
+      color: $text-black;
+      border: solid $text-grayDark calc(100vw / 1920 * 1);
+      &::placeholder{
+        color: $text-black;
+        @media (max-width: 412px) {
+          font-size: calc(100vw / 412 * 14);
+        }
+      }
+      @media (min-width: 1920px) {
+        height: 46px;
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid $text-grayDark;
+      }
+      @media (max-width: 820px) {
+        font-size: calc(100vw / 820 * 16);
+        padding: calc(100vw / 820 * 16);
+      }
+      @media (max-width: 412px) {
+        font-size: calc(100vw / 412 * 12);
+        padding: calc(100vw / 412 * 16);
+      }
+    }
+  }
+}

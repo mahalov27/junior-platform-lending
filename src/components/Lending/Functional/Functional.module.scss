@@ -1,0 +1,178 @@
+@use "../../../utils/variables.scss" as *;
+
+.section {
+  position: relative;
+  overflow-x: hidden;
+  padding: 0 calc(100vw / 820 * 40);
+  @media (max-width: 820px) {
+    overflow-x:visible;
+    // height: calc(100vw / 820 * 1170);
+  }
+  @media (max-width: 820px) {
+    padding: 0;
+  }
+  .container {
+    position: relative;
+    height: 100vh;
+    width: 210vw;
+    overflow-x: hidden;
+    @media (max-width: 820px) {
+      width: 100vw;
+      height: fit-content;
+      overflow-x: visible;
+    }
+    .background {
+      position: absolute;
+      top:0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      opacity: 0.4;
+      @media (max-width: 820px) {
+        display: none;
+      }
+      .flagLeft {
+        position: absolute;
+        top: 41%;
+        left: 6%;
+        transform: translateY(-50%);
+        width: calc(100vw / 1920 * 818);
+        height: calc(100vw / 1920 * 710);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @media (min-width: 1920px) {
+          width: 818px;
+          height: 710px;
+        }
+      }
+    }
+    .scrollSections {
+      display: flex;
+      align-items: center;
+      width: 210vw;
+      height: 100vh;
+      overflow-x: hidden;
+      @media (max-width: 820px) {
+        width: 100vw;
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
+        overflow-x: visible;
+      }
+      .title {
+        display: inline-block;
+        width: calc(100vw / 1920 * 503);
+        font-family: "Unbounded";
+        font-size: calc(100vw / 1920 * 64);
+        font-weight: 600;
+        line-height: 130%;
+        margin-left: calc(100vw / 1920 * 311);
+        margin-right: calc(100vw / 1920 * 429);
+        @media (min-width: 1920px) {
+          width: 503px;
+          font-size: 64px;
+          margin-left: 311px;
+          margin-right: 429px;
+        }
+        @media (max-width: 820px) {
+          font-size: calc(100vw / 820 * 55);
+          width: calc(100vw / 820 * 550);
+          margin: 0;
+          margin-bottom: 10%;
+          margin-left: calc(100vw / 820 * 40);
+        }
+        @media (max-width: 412px) {
+          width: 100%;
+          font-size: calc(100vw / 412 * 32);
+          margin-left: calc(100vw / 412 * 20);
+        }
+      }
+      .content {
+        height: 100vh;
+        align-items: center;
+        display: flex;
+        gap: calc(100vw / 1920 * 24);
+        @media (min-width: 1920px) {
+          gap: 24px;
+        }
+        @media (max-width: 820px) {
+          flex-direction: column;
+          height: fit-content;
+          gap: calc(100vw / 820 * 24);
+          padding: 0 calc(100vw / 820 * 40);
+        }
+        @media (max-width: 412px) {
+          padding: 0;
+          gap: calc(100vw / 412 * 40);
+        }
+        .contentItem {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: calc(100vw / 1920 * 818);
+          height: calc(100vw / 1920 * 700);
+          border-radius: calc(100vw / 1920 * 100);
+          background: $bg-green;
+          @media (min-width: 1920px) {
+            // width: 818px;
+            height: 700px;
+            border-radius: 100px;
+          }
+          @media (max-width: 820px) {
+            width: calc(100vw / 820 * 740);
+            
+          }
+          @media (max-width: 412px) {
+            border-radius: calc(100vw / 412 * 50);
+            width: calc(100vw / 412 * 412);
+            height: calc(100vw / 412 * 490);
+            padding: calc(100vw / 412 * 50);
+          }
+          .itemTitle {
+            width: calc(100vw / 1920 * 360);
+            font-family: "Unbounded";
+            font-size: calc(100vw / 1920 * 32);
+            font-weight: 500;
+            line-height: 130%;
+            color:$text-black;
+            margin-bottom: 2.5%;
+            @media (min-width: 1920px) {
+              width: 360px;
+              font-size: 32px;
+            }
+            @media (max-width: 820px) {
+              width: calc(100vw / 820 * 300);
+              font-size: calc(100vw / 820 * 22);
+            }
+            @media (max-width: 412px) {
+              width: fit-content;
+              font-size: calc(100vw / 412 * 23);
+            }
+          }
+          .itemText {
+            width: calc(100vw / 1920 * 360);
+            font-family: "Mulish";
+            font-size: calc(100vw / 1400 * 18);
+            font-weight: 400;
+            line-height: 140%;
+            color:$text-black;
+            @media (min-width: 1920px) {
+              width: 360px;
+              font-size: 18px;
+            }
+            @media (max-width: 820px) {
+              font-size: calc(100vw / 820 * 14);
+              width: calc(100vw / 820 * 300);
+            }
+            @media (max-width: 412px) {
+              font-size: calc(100vw / 412 * 17.5);
+              width: fit-content;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@use "../../utils/variables.scss" as *;
+
+.container {
+  width: 100%;
+  min-height: calc(100vh - 232px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 412px) {
+    align-items: flex-start;
+    font-size: calc(100vw / 412 * 35);
+    padding: 0 calc(100vw / 412 * 45);
+  }
+  .title {
+    font-family: "Unbounded";
+    font-size: calc(100vw / 1920 * 64);
+    margin-bottom: calc(100vw / 1920 * 50);
+    @media (min-width: 1920px) {
+      font-size: 64px;
+      margin-bottom: 50px;
+    }
+    @media (max-width: 412px) {
+      font-size: calc(100vw / 412 * 35);
+    }
+  }
+  .text {
+    font-family: "Mulish";
+    font-size: calc(100vw / 1920 * 30);
+    @media (min-width: 1920px) {
+      font-size: 30px;
+    }
+    @media (max-width: 412px) {
+      font-size: calc(100vw / 412 * 16);
+    }
+    .link {
+      font-family: "Mulish";
+      font-size: calc(100vw / 1920 * 40);
+      font-weight: 600;
+      color: $text-green;
+      @media (min-width: 1920px) {
+        font-size: 40px;
+      }
+      @media (max-width: 412px) {
+        font-size: calc(100vw / 412 * 24);
+      }
+    }
+  }
+}

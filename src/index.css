@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  color: #fff
+}
+
+a{
+  text-decoration: none;
+  color: #02031B;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+p,
+label,
+input,
+div,
+span {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bcbcbc;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bcbcbc;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bcbcbc;
+}
+body{
+  background: #222933;
+}

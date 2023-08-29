@@ -1,0 +1,9 @@
+@use "../../utils/variables.scss" as *;
+
+.container {
+  position: relative;
+  width: 100%;
+  color: $text-white;
+  overflow-x: hidden;
+  
+}
