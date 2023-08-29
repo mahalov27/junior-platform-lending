@@ -3,7 +3,6 @@
 .section {
   position: relative;
   overflow-x: hidden;
-  padding: 0 calc(100vw / 820 * 40);
   @media (max-width: 820px) {
     overflow-x:visible;
     // height: calc(100vw / 820 * 1170);

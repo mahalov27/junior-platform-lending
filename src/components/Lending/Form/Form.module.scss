@@ -157,6 +157,7 @@
           height: calc(100vw / 412 * 46);
           font-size: calc(100vw / 412 * 16);
           border-radius: calc(100vw / 412 * 12);
+          margin-top: calc(100vw / 412 * 10);
         }
         &:disabled{
           opacity: 0.5;

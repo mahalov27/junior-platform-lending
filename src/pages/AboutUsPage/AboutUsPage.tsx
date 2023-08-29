@@ -11,7 +11,6 @@ const AboutUsPage = () => {
 
   return (
     <div className={styles.container}>
-      
       <Title/>
       <AboutUs />
       <ForWho />
