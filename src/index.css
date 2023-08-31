@@ -29,6 +29,23 @@ span {
   font-family: "Raleway", sans-serif;
 }
 
+:root{
+  --color-grey: #a5a5a5;
+  --color-hover: #bbbbbb;
+  --transition: 0.4s; 
+}
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgba(166, 166, 166, 0.1);  
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #bcbcbc;

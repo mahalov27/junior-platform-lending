@@ -36,25 +36,25 @@ const Tape = () => {
     }, []);
   return (
     <section className={styles.section}>
-        <div className={styles.container} ref={triggerRef}>
+      <div className={styles.container} ref={triggerRef}>
         <div className={styles.background}>
-           <div style={{backgroundImage: `url(${flag})`}} className={styles.flagLeft}></div>
+          <div style={{ backgroundImage: `url(${flag})` }} className={styles.flagLeft}></div>
         </div>
-            <div className={styles.scrollSection} ref={sectionRef}>
-                <div className={styles.content}>
-        {
-            feed.map(item => {
+        <div className={styles.scrollSection} ref={sectionRef}>
+          <div className={styles.content}>
+            {
+              feed.map(item => {
                 return (
-                <p key={item.id} className={styles.title}>{item.titleStart} <span>{item.titleEnd}</span></p>
+                  <p key={item.id} className={styles.title}>{item.titleStart} <span>{item.titleEnd}</span></p>
                 )
-            })
-        }
+              })
+            }
 
-                </div>
+          </div>
 
-            </div>
         </div>
-      
+      </div>
+
     </section>
   )
 }

@@ -13,7 +13,7 @@ const AboutUs = () => {
 
   useEffect(() => {
 
-    if(window.innerWidth > 820) {
+    if(window.innerWidth >= 820) {
       
       const pin = gsap.fromTo(
         sectionRef.current,

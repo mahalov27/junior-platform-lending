@@ -188,11 +188,11 @@
       &:before {
         background: linear-gradient(
           90deg,
-          rgba(25, 225, 189, 0.71) 0%,
-          rgba(54, 111, 196, 0.49) 60%,
-          rgba(82, 167, 53, 0.83) 90%
+            rgba(25, 225, 189, 0.71) 0%,
+            rgba(54, 111, 196, 0.49) 50%,
+            rgba(54, 111, 196, 0.49) 70%,
+            rgba(82, 167, 53, 0.83) 100%
         );
-        background-size: 150%;
       }
       &:after {
         z-index: -3;
@@ -204,14 +204,13 @@
         background: linear-gradient(
           90deg,
           rgba(82, 167, 53, 0.83) 0%,
-          rgba(54, 111, 196, 0.49) 60%,
-          rgba(25, 225, 189, 0.71) 90%,
-          // rgba(54, 111, 196, 0.49) 100%,
+          rgba(54, 111, 196, 0.49) 50%,
+          rgba(54, 111, 196, 0.49) 70%,
+          rgba(25, 225, 189, 0.71) 100%,
      
         );
       }
       &:hover::before {
-        background-position: 40%;
         opacity: 0;
       }
       .link {
