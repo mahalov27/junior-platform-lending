@@ -10,21 +10,9 @@
     align-items: center;
     color: $text-white;
     font-family: 'Raleway';
-    font-size: 16px;
+    font-size: 20px ;
     font-style: normal;
     line-height: 150%;
     cursor: pointer;
-  }
-  .arrow{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 24px;
-    width: 24px;
-    margin-left: 8px;
-    transition: 0.3s;
-  }
-  .active{
-    rotate: 180deg;
   }
 }

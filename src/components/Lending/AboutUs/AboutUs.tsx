@@ -1,19 +1,20 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import styles from "./AboutUs.module.scss";
 
 const AboutUs = () => {
+  const [widthVw, setWidth] = useState<number | null>(null)
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
   const flashRef = useRef(null);
   const flashTrigetRef = useRef(null);
-
+  
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
 
-    if(window.innerWidth >= 820) {
+    if(window.innerWidth > 820) {
       
       const pin = gsap.fromTo(
         sectionRef.current,
@@ -41,33 +42,35 @@ const AboutUs = () => {
       return
     }
 
-  }, []);
+  }, [widthVw]);
 
   useEffect(() => {
-    const pin = gsap.fromTo(
-        flashRef.current,
-      {
-        top: "100px",
-        opacity: 1
-      },
-      {
-        top: "0px",
-        opacity: 0,
-        ease: "none",
-        duration: 1,
-        scrollTrigger: {
-          trigger: flashTrigetRef.current,
-          start: "lop top",
-          end: "800 top",
-          scrub: 0.6,
-          pin: true,
+      const pin = gsap.fromTo(
+          flashRef.current,
+        {
+          top: "100px",
+          opacity: 1
         },
-      }
-    );
-    return () => {
-      pin.kill();
-    };
+        {
+          top: "0px",
+          opacity: 0,
+          ease: "none",
+          duration: 1,
+          scrollTrigger: {
+            trigger: flashTrigetRef.current,
+            start: "lop top",
+            end: "800 top",
+            scrub: 0.6,
+            pin: true,
+          },
+        }
+      );
+      return () => {
+        pin.kill();
+      };
   }, []);
+
+  window.addEventListener('resize', () => setWidth(window.innerWidth))
   
   return (
     <section id="about-us" className={styles.section}>

@@ -3,31 +3,33 @@ import flag from "../../../assets/png/flag.png"
 import styles from "./Watch.module.scss";
 
 const Watch: React.FC = () => {
-  const [days, setDays] = useState<number>(0);
-  const [hours, setHours] = useState<number>(0);
-  const [minutes, setMinutes] = useState<number>(0);
+  const [days, setDays] = useState<string>('00');
+  const [hours, setHours] = useState<string>("00");
+  const [minutes, setMinutes] = useState<string>("00");
 
-  const intervalRef = useRef<number | undefined>();
+  const intervalRef = useRef<NodeJS.Timeout | undefined>();
+
+  const formatting = (num: number) => {
+    return num.toString().length > 1 ? num.toString() : `0${num.toString()}`;
+  }
 
   const timer = () => {
-    const coountdownDate = new Date("September 30, 2023 00:00:00").getTime();
+    const coountdownDate = new Date("September 9, 2023 00:00:00").getTime();
 
     intervalRef.current = setInterval(() => {
       const now = new Date().getTime();
       const distance = coountdownDate - now;
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
       if (distance < 0) {
         clearInterval(intervalRef.current);
       } else {
-        setDays(days);
-        setHours(hours);
-        setMinutes(minutes);
+        setDays(formatting(days));
+        setHours(formatting(hours));
+        setMinutes(formatting(minutes));
       }
     }, 1000);
   };
@@ -39,6 +41,7 @@ const Watch: React.FC = () => {
         clearInterval(intervalRef.current);
       }
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
