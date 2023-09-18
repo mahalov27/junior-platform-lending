@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import flag from "../../../assets/png/flag.png";
 import styles from './Functional.module.scss';
 
 const Functional = () => {
@@ -49,9 +48,6 @@ const Functional = () => {
   return (
     <section className={styles.section}>
         <div className={styles.container} ref={triggerRef}>
-        <div className={styles.background}>
-           <div style={{backgroundImage: `url(${flag})`}} className={styles.flagLeft}></div>
-        </div>
             <div className={styles.scrollSections} ref={sectionRef}>
                 <h1 className={styles.title}>Що вас очікує на платформі?</h1>
                 <div className={styles.content}>
