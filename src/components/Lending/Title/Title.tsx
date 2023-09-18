@@ -1,22 +1,22 @@
 import { DubleArrowIcon } from "../../../assets/Icons";
-import flag from "../../../assets/png/flag.png"
+// import flag from "../../../assets/png/fla.png"
 import styles from "./Title.module.scss";
 
 const Title = () => {
   return (
     <div className={styles.titleContainer}>
-      <div className={styles.backgroundContainer}>
+      {/* <div className={styles.backgroundContainer}>
            <div style={{backgroundImage: `url(${flag})`}} className={styles.flagLeft}></div>
            <div style={{backgroundImage: `url(${flag})`}} className={styles.flagRight}></div>
-      </div>
+      </div> */}
       <div className={styles.titleContent}>
         <h1 className={styles.mainTitle}>
           Допоможемо знайти роботу в команді у один клік
         </h1>
-        <h5 className={styles.mainDescription}>
+        <p className={styles.mainDescription}>
           Знайди свій ідеальний пет-проєкт або команду для реалізації власної
           ідеї
-        </h5>
+        </p>
         <button className={styles.linkBtn}>
           <a href="#form" className={styles.link}>
             Залишити контактні дані

@@ -59,7 +59,7 @@ const Form = () => {
         <div className={styles.textBlock}>
           <h5 className={styles.title}>Ми ще на етапі розробки...</h5>
           <p className={styles.text}>
-            Залишай <span>свій e-mail</span> і ми надішлемо листа, коли наша
+            Залишай <span>свій e-mail</span> і ми надішлемо листа, коли
             платформа запрацює.
           </p>
         </div>

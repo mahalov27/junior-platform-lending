@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import flag from "../../../assets/png/flag.png"
 import styles from "./Watch.module.scss";
 
 const Watch: React.FC = () => {
@@ -14,7 +13,7 @@ const Watch: React.FC = () => {
   }
 
   const timer = () => {
-    const coountdownDate = new Date("September 9, 2023 00:00:00").getTime();
+    const coountdownDate = new Date("September 30, 2023 00:00:00").getTime();
 
     intervalRef.current = setInterval(() => {
       const now = new Date().getTime();
@@ -46,9 +45,6 @@ const Watch: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.backgroundContainer}>
-        <div style={{backgroundImage: `url(${flag})`}} className={styles.flagRight}></div>
-      </div>
       <h1 className={styles.title}>
         Чекати залишилось <span>лише:</span>
       </h1>

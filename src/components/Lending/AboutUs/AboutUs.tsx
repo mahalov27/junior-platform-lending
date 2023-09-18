@@ -9,6 +9,7 @@ const AboutUs = () => {
   const triggerRef = useRef(null);
   const flashRef = useRef(null);
   const flashTrigetRef = useRef(null);
+
   
   gsap.registerPlugin(ScrollTrigger);
 

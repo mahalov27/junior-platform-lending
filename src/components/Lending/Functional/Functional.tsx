@@ -1,10 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import flag from "../../../assets/png/flag.png";
 import styles from './Functional.module.scss';
 
 const Functional = () => {
+  const [widthVw, setWidth] = useState<number | null>(null)
     const sectionRef = useRef(null);
     const triggerRef = useRef(null);
   
@@ -12,7 +13,9 @@ const Functional = () => {
   
     useEffect(() => {
 
-      if(window.innerWidth > 820) {
+      !widthVw && setWidth(window.innerWidth)
+
+      if( widthVw !== null && widthVw > 744) {
 
         const pin = gsap.fromTo(
           sectionRef.current,
@@ -20,7 +23,7 @@ const Functional = () => {
             translateX: 0,
           },
           {
-            translateX: "-110vw",
+            translateX: widthVw !== null && widthVw <= 1440 ? "-175vw" : "-140vw",
             ease: "none",
             duration: 1,
             scrollTrigger: {
@@ -39,7 +42,9 @@ const Functional = () => {
         return
       }
 
-    }, []);
+    }, [widthVw]);
+
+    window.addEventListener('resize', () => setWidth(window.innerWidth))
 
   return (
     <section className={styles.section}>
@@ -52,11 +57,11 @@ const Functional = () => {
                 <div className={styles.content}>
                     <div className={styles.contentItem}>
                         <h5 className={styles.itemTitle}>Проєкти із готовим описом</h5>
-                        <p className={styles.itemText}>Ми створили для вас декілька шаблоних пет-проєктів на вибір, щоб команда швидше почала роботу і не витрачала час на довгі обговорення. Також для полегшення процесу ми додали опис із завданнями для усіх учасників</p>
+                        <p className={styles.itemText}>Ми створили для вас кілька шаблоних пет-проєктів на вибір, щоб команда швидше почала роботу і не гаяла час на довгі обговорення.  А для полегшення процесу ми додали опис із завданнями для всіх учасників</p>
                     </div>
                     <div className={styles.contentItem}>
                         <h5 className={styles.itemTitle}>Можливість створити власний проєкт</h5>
-                        <p className={styles.itemText}>На нашій платформі ви зможете реалізувати свої власні ідеї, зібрати команду для цих ідей та спробувати себе в якості продакт овнера, рекрутера та багатьох інших </p>
+                        <p className={styles.itemText}>На нашій платформі ви зможете реалізувати власні ідеї, зібрати команду та спробувати себе у ролі продакт овнера, рекрутера та багатьох інших </p>
                     </div>
                     <div className={styles.contentItem}>
                         <h5 className={styles.itemTitle}>Додатковий функціонал</h5>

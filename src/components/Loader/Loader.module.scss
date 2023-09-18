@@ -4,13 +4,29 @@
     height: calc(100vw / 1920 * 30);
     border-radius: 50%;
     display: inline-block;
-    border-top: 3px solid $text-black;
+    border-top: 3px solid $text-white;
     border-right: 3px solid transparent;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
     @media (min-width: 1920px) {
       height: 30px;
       width: 30px;
+    }
+    @media (max-width: 1440px) {
+      height: calc(100vw / 1440 * 30);
+      width: calc(100vw / 1440 * 30);
+    }
+    @media (max-width: 1280px) {
+      height: calc(100vw / 1280 * 30);
+      width: calc(100vw / 1280 * 30);
+    }
+    @media (max-width: 744px) {
+      height: calc(100vw / 744 * 30);
+      width: calc(100vw / 744 * 30);
+    }
+    @media (max-width: 414px) {
+      height: calc(100vw / 414 * 25);
+      width: calc(100vw / 414 * 25);
     }
   }
   

@@ -3,18 +3,24 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: calc(100vw / 1920 * 7);
-  margin-bottom: calc(100vw / 1920 * 15);
+  gap: calc(100vw / 1920 * 5);
+  margin-bottom: calc(100vw / 1920 * 5);
   width: 100%;
   @media (min-width: 1920px) {
-    margin-bottom: 15px;
-    gap: 7px;
+    margin-bottom: 5px;
+    gap: 5px;
   }
-  @media (max-width: 820px) {
-    gap: calc(100vw / 820 * 7);
+  @media (max-width: 1440px) {
+    gap: calc(100vw / 1440 * 7);
   }
-  @media (max-width: 412px) {
-    gap: calc(100vw / 412 * 8);
+  @media (max-width: 1280px) {
+    gap: calc(100vw / 1280 * 7);
+  }
+  @media (max-width: 744px) {
+    gap: calc(100vw / 744 * 7);
+  }
+  @media (max-width: 414px) {
+    gap: calc(100vw / 414 * 8);
   }
   .title {
     font-family: "Raleway";
@@ -25,10 +31,16 @@
       font-size: 14px;
       line-height: 14px;
     }
-    @media (max-width: 820px) {
-      font-size: calc(100vw / 820 * 14);
+    @media (max-width: 1440px) {
+      font-size: calc(100vw / 1440 * 14);
     }
-    @media (max-width: 412px) {
+    @media (max-width: 1280px) {
+      font-size: calc(100vw / 1280 * 14);
+    }
+    @media (max-width: 744px) {
+      font-size: calc(100vw / 744 * 14);
+    }
+    @media (max-width: 414px) {
       font-size: calc(100vw / 412 * 14);
     }
   }
@@ -41,31 +53,41 @@
     input {
       font-family: "Raleway";
       width: 100%;
-      height: calc(100vw / 1920 * 46);
-      padding: calc(100vw / 1920 * 15);
+      height: calc(100vw / 1920 * 56);
+      padding: 0 calc(100vw / 1920 * 16);
       border-radius: calc(100vw / 1920 * 12);
-      font-size:calc(100vw / 1920 * 14); 
+      font-size:calc(100vw / 1920 * 16); 
       color: $text-black;
       border: solid $text-grayDark calc(100vw / 1920 * 1);
       &::placeholder{
-        color: $text-black;
+        color: $text-grey;
+        font-weight: 600;
         @media (max-width: 412px) {
-          font-size: calc(100vw / 412 * 14);
+          font-size: calc(100vw / 412 * 16);
         }
       }
       @media (min-width: 1920px) {
-        height: 46px;
+        height: 56px;
         padding: 15px;
         border-radius: 12px;
-        border: 1px solid $text-grayDark;
       }
-      @media (max-width: 820px) {
-        font-size: calc(100vw / 820 * 16);
-        padding: calc(100vw / 820 * 16);
+      @media (max-width: 1440px) {
+        font-size: calc(100vw / 1440 * 16);
+        padding: calc(100vw / 1440 * 16);
       }
-      @media (max-width: 412px) {
-        font-size: calc(100vw / 412 * 12);
-        padding: calc(100vw / 412 * 16);
+      @media (max-width: 1280px) {
+        font-size: calc(100vw / 1280 * 16);
+        padding: calc(100vw / 1280 * 16);
+      }
+      @media (max-width: 744px) {
+        font-size: calc(100vw / 744 * 16);
+        padding: calc(100vw / 744 * 16);
+        margin-bottom: calc(100vw / 744 * 5);
+      }
+      @media (max-width: 414px) {
+        font-size: calc(100vw / 414 * 14);
+        padding: calc(100vw / 414 * 16);
+        margin-bottom: calc(100vw / 414 * 14);
       }
     }
   }
