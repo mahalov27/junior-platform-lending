@@ -7,23 +7,23 @@
   align-items: center;
   justify-content: center;
   height: calc(100vw / 1920 * 525);
-  width:100%;
+  width: 100%;
   @media (min-width: 1920px) {
     height: 525px;
   }
   @media (max-width: 1440px) {
-   height: calc(100vw / 1440 * 525);
+    height: calc(100vw / 1440 * 525);
   }
   @media (max-width: 1280px) {
-   height: calc(100vw / 1280 * 508);
+    height: calc(100vw / 1280 * 508);
   }
   @media (max-width: 744px) {
-   height: calc(100vw / 744 * 453);
+    height: calc(100vw / 744 * 453);
   }
   @media (max-width: 414px) {
-    height: calc(100vw / 414 * 303);                 
+    height: calc(100vw / 414 * 303);
   }
-  .title{
+  .title {
     @media (max-width: 414px) {
       margin-left: calc(100vw / 414 * 20);
     }
@@ -101,7 +101,8 @@
         align-items: center;
         width: calc(100vw / 1920 * 152);
         height: calc(100vw / 1920 * 172);
-        background-color: $bg-indigo;
+        // background-color: $bg-indigo;
+        backdrop-filter: blur(4px);
         border-radius: calc(100vw / 1920 * 10);
         @media (min-width: 1920px) {
           width: 152px;
@@ -129,52 +130,118 @@
           border-radius: calc(100vw / 412 * 10);
         }
         &::after {
-          content: "";
-          position: absolute;
-          width: calc(100vw / 1920 * 160);
-          height: calc(100vw / 1920 * 180);
-          z-index: -1;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          border-radius: calc(100vw / 1920 * 12);
-          background: linear-gradient(
-            90deg,
-            rgba(25, 225, 189, 0.71) 0%,
-            rgba(54, 111, 196, 0.49) 50%,
-            rgba(54, 111, 196, 0.49) 70%,
-            rgba(82, 167, 53, 0.83) 100%
-          );
-          // clip-path: polygon(20px 20px, 20px calc(100% - 20px), calc(100% - 20px) calc(100% - 20px), calc(100% - 20px) 20px); /* Вырезаем область внутри блока */
-          @media (min-width: 1920px) {
-            width: 160px;
-            height: 180px;
-            border-radius: 12px;
+            content: "";
+            position: absolute;
+            width: calc(100vw / 1920 * 160);
+            height: calc(100vw / 1920 * 180);
+            background-image: url(../../../assets/number@2x.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: calc(100vw / 1920 * 12);
+            @media (min-width: 1920px) {
+                  width: 160px;
+                  height: 180px;
+                  border-radius: 12px;
+                }
+                @media (max-width: 1440px) {
+                  width: calc(100vw / 1440 * 160);
+                  height: calc(100vw / 1440 * 180);
+                  border-radius: calc(100vw / 1440 * 12);
+                }
+                @media (max-width: 1280px) {
+                  width: calc(100vw / 1280 * 160);
+                  height: calc(100vw / 1280 * 180);
+                  border-radius: calc(100vw / 1280 * 12);
+                }
+                @media (max-width: 744px) {
+                  width: calc(100vw / 744 * 160);
+                  height: calc(100vw / 744 * 180);
+                  border-radius: calc(100vw / 744 * 12);
+                }
+                @media (max-width: 414px) {
+                  width: calc(100vw / 414 * 80);
+                  height: calc(100vw / 414 * 100);
+                  border-radius: calc(100vw / 414 * 12);
+                }
           }
-          @media (max-width: 1440px) {
-            width: calc(100vw / 1440 * 160);
-            height: calc(100vw / 1440 * 180);
-            border-radius: calc(100vw / 1440 * 12);
-          }
-          @media (max-width: 1280px) {
-            width: calc(100vw / 1280 * 160);
-            height: calc(100vw / 1280 * 180);
-            border-radius: calc(100vw / 1280 * 12);
-          }
-          @media (max-width: 744px) {
-            width: calc(100vw / 744 * 160);
-            height: calc(100vw / 744 * 180);
-            border-radius: calc(100vw / 744 * 12);
-          }
-          @media (max-width: 414px) {
-            width: calc(100vw / 414 * 80);
-            height: calc(100vw / 414 * 100);
-            border-radius: calc(100vw / 414 * 12);
-          }
-        }
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   width: calc(100vw / 1920 * 160);
+        //   height: calc(100vw / 1920 * 180);
+        //   z-index: -1;
+        //   top: 50%;
+        //   left: 50%;
+        //   transform: translate(-50%, -50%);
+        //   border-radius: calc(100vw / 1920 * 12);
+        //   background: linear-gradient(
+        //     90deg,
+        //     rgba(25, 225, 189, 0.71) 0%,
+        //     rgba(54, 111, 196, 0.49) 50%,
+        //     rgba(54, 111, 196, 0.49) 70%,
+        //     rgba(82, 167, 53, 0.83) 100%
+        //   );
+        //   // clip-path: polygon(
+        //   //   evenodd,
+        //   //   0% 0%,
+        //   //   100% 0%,
+        //   //   100% 100%,
+        //   //   0% 100%,
+        //   //   14px 100%,
+        //   //   14px 14px,
+        //   //   calc(100vw / 1920 * 146) calc(100vw / 1920 * 14),
+        //   //   calc(100vw / 1920 * 146) calc(100vw / 1920 * 166),
+        //   //   calc(100vw / 1920 * 14) calc(100vw / 1920 * 166),
+        //   //   0 100%,
+        //   // );
+        //   clip-path: 
+        //   inset(5px)
+        //   polygon(
+        //     0% 0%,
+        //     0% 100%,
+        //     14px 100%,
+        //     14px 14px,
+        //     146px 14px,
+        //     146px 166px,
+        //     14px 166px,
+        //     14px 100%,
+        //     100% 100%,
+        //     100% 0%
+        //   );
+        //   @media (min-width: 1920px) {
+        //     width: 160px;
+        //     height: 180px;
+        //     border-radius: 12px;
+        //   }
+        //   @media (max-width: 1440px) {
+        //     width: calc(100vw / 1440 * 160);
+        //     height: calc(100vw / 1440 * 180);
+        //     border-radius: calc(100vw / 1440 * 12);
+        //   }
+        //   @media (max-width: 1280px) {
+        //     width: calc(100vw / 1280 * 160);
+        //     height: calc(100vw / 1280 * 180);
+        //     border-radius: calc(100vw / 1280 * 12);
+        //   }
+        //   @media (max-width: 744px) {
+        //     width: calc(100vw / 744 * 160);
+        //     height: calc(100vw / 744 * 180);
+        //     border-radius: calc(100vw / 744 * 12);
+        //   }
+        //   @media (max-width: 414px) {
+        //     width: calc(100vw / 414 * 80);
+        //     height: calc(100vw / 414 * 100);
+        //     border-radius: calc(100vw / 414 * 12);
+        //   }
+        // }
         p {
-          font-family: 'Unbounded';
-          font-size: calc(100vw / 1920 * 64);;
+          font-family: "Unbounded";
+          font-size: calc(100vw / 1920 * 64);
           font-style: normal;
           font-weight: 400;
           @media (min-width: 1920px) {
@@ -195,8 +262,8 @@
         }
       }
       .clockTitle {
-        font-family: 'Raleway';
-        font-size: calc(100vw / 1920 * 16);;
+        font-family: "Raleway";
+        font-size: calc(100vw / 1920 * 16);
         font-weight: 400;
         line-height: 165%;
         @media (min-width: 1920px) {
