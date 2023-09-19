@@ -158,7 +158,7 @@
             right: -1px;
             width: calc(100vw / 744 * 247);
             height: calc(100vw / 744 * 99);
-            border-radius: 0 0 0 calc(100vw / 744 * 100);
+            border-radius: 0 calc(100vw / 744 * 100) 0 calc(100vw / 744 * 100);
             background: $bg-indigo;
           }
         }
@@ -170,7 +170,7 @@
           &::before {
             width: calc(100vw / 414 * 213);
             height: calc(100vw / 414 * 80);
-            border-radius: 0 0 0 calc(100vw / 414 * 150);
+            border-radius: 0 calc(100vw / 414 * 150) 0 calc(100vw / 414 * 150);
           }
         }
         &:nth-child(2n) {
