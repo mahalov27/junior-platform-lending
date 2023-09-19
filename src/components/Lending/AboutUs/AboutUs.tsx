@@ -50,11 +50,15 @@ const AboutUs = () => {
           flashRef.current,
         {
           top: "100px",
-          opacity: 1
+          opacity: 1,
+          borderRadius: "0px",
         },
         {
           top: "0px",
           opacity: 0,
+          borderRadius: "100px",
+          width: "97.5vw",
+          left: "1vw",
           ease: "none",
           duration: 1,
           scrollTrigger: {

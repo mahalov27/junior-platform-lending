@@ -20,10 +20,10 @@
     .flash {
       position: absolute;
       z-index: 5px;
-      left: 0;
+      left:0;
       top: 0;
-      width: 100vw;
-      height: 100%;
+      width: calc(100vw - 8px);
+      height: 120%;
       background: $bg-white;
       @media (max-width: 744px) {
         display: none;   

@@ -145,6 +145,7 @@
             rgba(54, 111, 196, 0.49) 70%,
             rgba(82, 167, 53, 0.83) 100%
           );
+          // clip-path: polygon(20px 20px, 20px calc(100% - 20px), calc(100% - 20px) calc(100% - 20px), calc(100% - 20px) 20px); /* Вырезаем область внутри блока */
           @media (min-width: 1920px) {
             width: 160px;
             height: 180px;
