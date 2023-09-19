@@ -2,11 +2,13 @@ import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import Background from "../Background/Background";
 
 const Layout: React.FC = () => {
   return (
     <>
       <Header />
+      <Background/>
       <main>
         <Suspense fallback={<p>Loading...</p>}>
           <Outlet />
