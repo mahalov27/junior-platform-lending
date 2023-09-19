@@ -44,6 +44,7 @@ span {
   --transition: 0.4s; 
 }
 ::-webkit-scrollbar{
+  background: #222831;
   width: 8px;
 }
 ::-webkit-scrollbar-track{
@@ -69,7 +70,4 @@ span {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #bcbcbc;
-}
-body{
-  background: #222831;
 }
