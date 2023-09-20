@@ -134,7 +134,7 @@
             position: absolute;
             width: calc(100vw / 1920 * 160);
             height: calc(100vw / 1920 * 180);
-            background-image: url(../../../assets/number@2x.png);
+            background-image: url(../../../assets/png/number@1920.png);
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -149,21 +149,25 @@
                   border-radius: 12px;
                 }
                 @media (max-width: 1440px) {
+                  background-image: url(../../../assets/png/number@1440.png);
                   width: calc(100vw / 1440 * 160);
                   height: calc(100vw / 1440 * 180);
                   border-radius: calc(100vw / 1440 * 12);
                 }
                 @media (max-width: 1280px) {
+                  background-image: url(../../../assets/png/number@1280.png);
                   width: calc(100vw / 1280 * 160);
                   height: calc(100vw / 1280 * 180);
                   border-radius: calc(100vw / 1280 * 12);
                 }
                 @media (max-width: 744px) {
+                  background-image: url(../../../assets/png/number@744.png);
                   width: calc(100vw / 744 * 160);
                   height: calc(100vw / 744 * 180);
                   border-radius: calc(100vw / 744 * 12);
                 }
                 @media (max-width: 414px) {
+                  background-image: url(../../../assets/png/number@414.png);
                   width: calc(100vw / 414 * 80);
                   height: calc(100vw / 414 * 100);
                   border-radius: calc(100vw / 414 * 12);
