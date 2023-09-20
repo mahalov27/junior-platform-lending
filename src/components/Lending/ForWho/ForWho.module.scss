@@ -67,6 +67,7 @@
       height: fit-content;
       margin: 0 auto;
       display: flex;
+      align-items: flex-end;
       justify-content: space-between;
       @media (min-width: 1920px) {
         width: 1599px;
@@ -86,62 +87,27 @@
         width: calc(100vw /414 * 375);
         height:calc(100vw / 414 * 1340);
       }
-      &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        z-index: 1;
-        top: -1px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100vw / 1920 * 830);
-        height: calc(100vw / 1920 * 110);
-        border-radius: 0 0 calc(100vw / 1920 * 150) calc(100vw / 1920 * 150);
-        background: $bg-indigo;
-        @media (min-width: 1920px) {
-          width: 830px;
-          height: 110px;
-          border-radius: 0 0 150px 150px;
-        }
-        @media (max-width: 1440px) {
-          width: calc(100vw / 1440 * 737);
-          height: calc(100vw / 1440 * 99);
-          border-radius: 0 0 calc(100vw / 1440 * 150) calc(100vw / 1440 * 150);
-        }
-        @media (max-width: 1280px) {
-          width: calc(100vw / 1280 * 712);
-          height: calc(100vw / 1280 * 99);
-          border-radius: 0 0 calc(100vw / 1280 * 150) calc(100vw / 1280 * 150);
-        }
-        @media (max-width: 744px) {
-          display: none;
-        }
-      }
       .contentItem {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: calc(100vw / 1920 * 517);
-        height: calc(100vw / 1920 * 512);
-        border-radius: calc(100vw / 1920 * 100);
-        padding: calc(100vw / 1920 * 148) calc(100vw / 1920 * 104) 0;
+        height: calc(100vw / 1920 * 521);
+        padding: calc(100vw / 1920 * 148) calc(100vw / 1920 * 94) 0;
         @media (min-width: 1920px) {
           width: 517px;
           height: 521px;
-          border-radius: 100px;
           padding: 148px 103px 0;
         }
         @media (max-width: 1440px) {
           width: calc(100vw / 1440 * 397);
           height: calc(100vw / 1440 * 451);
-          border-radius: calc(100vw / 1440 * 100);
-          padding: calc(100vw / 1440 * 111) calc(100vw / 1440 * 67) 0;
+          padding: calc(100vw / 1440 * 124) calc(100vw / 1440 * 67) 0;
         }
         @media (max-width: 1280px) {
           width: calc(100vw / 1280 * 344);
           height: calc(100vw / 1280 * 483);
-          border-radius: calc(100vw / 1280 * 100);
           padding: calc(100vw / 1280 * 123) calc(100vw / 1280 * 32) 0;
         }
         @media (max-width: 744px) {
@@ -150,37 +116,102 @@
           width: calc(100vw / 744 * 494);
           border-radius: calc(100vw / 744 * 100);
           padding: calc(100vw / 744 * 148) calc(100vw / 744 * 92) 0;
-          &::before {
-            content: "";
-            position: absolute;
-            z-index: 1;
-            top: -1px;
-            right: -1px;
-            width: calc(100vw / 744 * 247);
-            height: calc(100vw / 744 * 99);
-            border-radius: 0 calc(100vw / 744 * 100) 0 calc(100vw / 744 * 100);
-            background: $bg-indigo;
-          }
+          // &::before {
+          //   content: "";
+          //   position: absolute;
+          //   z-index: 1;
+          //   top: -1px;
+          //   right: -1px;
+          //   width: calc(100vw / 744 * 247);
+          //   height: calc(100vw / 744 * 99);
+          //   border-radius: 0 calc(100vw / 744 * 100) 0 calc(100vw / 744 * 100);
+          //   background: $bg-indigo;
+          // }
         }
         @media (max-width: 414px) {
           height: calc(100vw / 414 * 420);
           width: calc(100vw / 414 * 375);
           border-radius: calc(100vw / 414 * 50);
           padding: calc(100vw / 414 * 111) calc(100vw / 414 * 56) 0;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
           &::before {
             width: calc(100vw / 414 * 213);
-            height: calc(100vw / 414 * 80);
             border-radius: 0 calc(100vw / 414 * 75) 0 calc(100vw / 414 * 150);
+            height: calc(100vw / 414 * 80);
+          }
+        }
+        &:first-child {
+          background-image: url(../../../assets/svg/cardGreenLeft@1920.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: bottom;
+          @media (max-width: 1440px) {
+            background-image: url(../../../assets/svg/cardGreenLeft@1440.svg);
+          }
+          @media (max-width: 1280px) {
+            background-image: url(../../../assets/svg/cardGreenLeft@1280.svg);
+          }
+          @media (max-width: 744px) {
+            background-image: url(../../../assets/svg/cardGreen@744.svg);
+          }
+          @media (max-width: 414px) {
+            background-image: url(../../../assets/svg/cardGreen@414.svg);
           }
         }
         &:nth-child(2n) {
-          background: $bg-white;
+          background-image: url(../../../assets/svg/cardWhite.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: bottom;
+          padding-top: calc(100vw / 1920 * 15);
+          height: calc(100vw / 1920 * 389);
+          @media (min-width: 1920px) {
+            padding-top: 15px;
+            height: 389px;
+          }
+          @media (max-width: 1440px) {
+            background-image: url(../../../assets/svg/cardWhite@1440.svg);
+            padding-top: calc(100vw / 1440 * 9);
+            height: calc(100vw / 1440 * 336);
+          }
+          @media (max-width: 1280px) {
+            background-image: url(../../../assets/svg/cardWhite@1280.svg);
+            padding-top: calc(100vw / 1280 * 13);
+            height: calc(100vw / 1280 * 373);
+          }
+          @media (max-width: 744px) {
+            background-image: url(../../../assets/svg/cardWhite@744.svg);
+            padding: calc(100vw / 744 * 148) calc(100vw / 744 * 92) 0;
+            height: calc(100vw / 744 * 521);
+          }
+          @media (max-width: 414px) {
+            background-image: url(../../../assets/svg/cardWhite@414.svg);
+            padding: calc(100vw / 414 * 111) calc(100vw / 414 * 56) 0;
+            height: calc(100vw / 414 * 420);
+          }
           .black {
             color: $text-black;
           }
         }
-        &:nth-child(odd) {
-          background: $bg-green;
+        &:last-child {
+          background-image: url(../../../assets/svg/cardGreenRight@1920.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          @media (max-width: 1440px) {
+            background-image: url(../../../assets/svg/cardGreenRight@1440.svg);
+          }
+          @media (max-width: 1280px) {
+            background-image: url(../../../assets/svg/cardGreenRight@1280.svg);
+          }
+          @media (max-width: 744px) {
+            background-image: url(../../../assets/svg/cardGreen@744.svg);
+          }
+          @media (max-width: 414px) {
+            background-image: url(../../../assets/svg/cardGreen@414.svg);
+          }
         }
         .itemTitle {
           font-family: "Unbounded";

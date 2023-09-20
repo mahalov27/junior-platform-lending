@@ -8,7 +8,7 @@ const ForWho = () => {
         <div className={styles.content}>
             <div className={styles.contentItem}>
                 <h5 className={styles.itemTitle}>Не маєш досвіду</h5>
-                <p className={styles.itemText}>Наша платформа допоможе тобі набути практичний досвід, розвинути комунікативні навички та стати більш конкурентоспроможним.</p>
+                <p className={styles.itemText}>Наша платформа допоможе тобі набути практичний досвід, розвинути комунікативні навички та стати тобі більш конкурентоспроможним.</p>
             </div>
             <div className={styles.contentItem}>
                 <h5 className={styles.itemTitle + " " + styles.black}>Хочеш втілити свої ідеї в життя</h5>
