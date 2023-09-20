@@ -6,22 +6,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vw / 1920 * 525);
+  height: calc(100vh - 140px);
   width: 100%;
-  @media (min-width: 1920px) {
-    height: 525px;
-  }
-  @media (max-width: 1440px) {
-    height: calc(100vw / 1440 * 525);
-  }
-  @media (max-width: 1280px) {
-    height: calc(100vw / 1280 * 508);
-  }
-  @media (max-width: 744px) {
-    height: calc(100vw / 744 * 453);
-  }
+
   @media (max-width: 414px) {
-    height: calc(100vw / 414 * 303);
+    height: calc(100vh - 81px);
   }
   .title {
     @media (max-width: 414px) {
