@@ -67,7 +67,7 @@ const Form = () => {
           <form>
             <CustomInput
               label={
-                !nameError ? "Ім`я" : "Ім`я має містити більше двох знаків"
+                !nameError ? "" : "Ім`я має містити більше двох знаків"
               }
               value={name}
               type={"text"}
@@ -78,7 +78,7 @@ const Form = () => {
               className={styles.input}
             />
             <CustomInput
-              label={!mailError ? "Введіть ваш e-mail" : "Некоректний e-mail"}
+              label={!mailError ? "" : "Некоректний e-mail"}
               value={mail}
               type={"text"}
               onChange={handleChange}

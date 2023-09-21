@@ -23,28 +23,33 @@
     gap: calc(100vw / 414 * 8);
   }
   .title {
+    height: calc(100vw / 1920 * 14);
     font-family: "Raleway";
     font-size: calc(100vw / 1920 * 14);
     font-weight: 400;
-    line-height: calc(100vw / 1920 * 14);
     @media (min-width: 1920px) {
       font-size: 14px;
-      line-height: 14px;
+      height: 14px;
     }
     @media (max-width: 1440px) {
       font-size: calc(100vw / 1440 * 14);
+      height: calc(100vw / 1440 * 14);
     }
     @media (max-width: 1280px) {
       font-size: calc(100vw / 1280 * 14);
+      height: calc(100vw / 1280 * 14);
     }
     @media (max-width: 744px) {
       font-size: calc(100vw / 744 * 14);
+      height: calc(100vw / 744 * 14);
     }
     @media (max-width: 414px) {
-      font-size: calc(100vw / 412 * 14);
+      font-size: calc(100vw / 414 * 14);
+      height: calc(100vw / 414 * 14);
     }
   }
   .error{
+    display: inline-block;
     color: red;
   }
   .inputWrapper {
