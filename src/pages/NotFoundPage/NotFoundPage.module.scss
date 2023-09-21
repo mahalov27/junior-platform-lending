@@ -2,15 +2,16 @@
 
 .container {
   width: 100%;
-  min-height: calc(100vh - 232px);
+  min-height: calc(100vh - 140px);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 412px) {
+  @media (max-width: 414px) {
     align-items: flex-start;
-    font-size: calc(100vw / 412 * 35);
-    padding: 0 calc(100vw / 412 * 45);
+    font-size: calc(100vw / 414 * 35);
+    padding: 0 calc(100vw / 414 * 45);
+    min-height: calc(100vh - 81px);
   }
   .title {
     font-family: "Unbounded";
