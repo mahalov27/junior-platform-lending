@@ -1,14 +1,9 @@
 import { DubleArrowIcon } from "../../../assets/Icons";
-// import flag from "../../../assets/png/fla.png"
 import styles from "./Title.module.scss";
 
 const Title = () => {
   return (
     <div className={styles.titleContainer}>
-      {/* <div className={styles.backgroundContainer}>
-           <div style={{backgroundImage: `url(${flag})`}} className={styles.flagLeft}></div>
-           <div style={{backgroundImage: `url(${flag})`}} className={styles.flagRight}></div>
-      </div> */}
       <div className={styles.titleContent}>
         <h1 className={styles.mainTitle}>
           Допоможемо знайти роботу в команді у один клік

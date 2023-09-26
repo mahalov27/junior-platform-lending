@@ -9,68 +9,6 @@
     width: 1920px;
     margin: 0 auto;
   }
-  .backgroundContainer {
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100vw / 1920 * 1920);
-    height: 100vh;
-    pointer-events: none;
-    opacity: 0.4;
-    @media (min-width: 1920px) {
-      width: 1920px;
-      margin: 0 auto;
-    }
-    .flagLeft,
-    .flagRight {
-      position: absolute;
-      width: calc(100vw / 1920 * 888);
-      height: calc(100vw / 1920 * 710);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      opacity: 1;
-      @media (min-width: 1920px) {
-        width: 888px;
-        height: 710px;
-      }
-      @media (max-width: 820px) {
-        width: calc(100vw / 820 * 788);
-        height: calc(100vw / 820 * 610);
-      }
-    }
-    .flagLeft {
-      top: -5%;
-      left: -12%;
-      @media (max-width: 820px) {
-        top: 40%;
-        left: -30%;
-      }
-      @media (max-width: 412px) {
-        top: 65%;
-        left: -10%;
-      }
-    }
-    .flagRight {
-      top: 15%;
-      right: -10%;
-      z-index: -1;
-      transform: scaleY(-1);
-      rotate: 180deg;
-      @media (min-width: 1920px) {
-      }
-      @media (max-width: 820px) {
-        top: 0;
-        right: -30%;
-      }
-      @media (max-width: 412px) {
-        top: 5%;
-        right: 0;
-      }
-    }
-  }
   .titleContent {
     display: flex;
     flex-direction: column;

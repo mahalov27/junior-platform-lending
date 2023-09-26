@@ -38,7 +38,7 @@ const Form = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "http://ec2-13-49-246-188.eu-north-1.compute.amazonaws.com/mailing_list_subscription/",
+        "https://alexandrzhydyk.pythonanywhere.com/api/v1/accounts/mailing_list_subscription/",
         {
           email: mail,
           name: name,

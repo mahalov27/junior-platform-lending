@@ -1,0 +1,19 @@
+@function vw1920($arg) {
+    @return 100vw / 1920 * $arg;
+}
+
+@function vw1440($arg) {
+    @return 100vw / 1440 * $arg;
+}
+
+@function vw1280($arg) {
+    @return 100vw / 1280 * $arg;
+}
+
+@function vw744($arg) {
+    @return 100vw / 744 * $arg;
+}
+
+@function vw414($arg) {
+    @return 100vw / 414 * $arg;
+}
