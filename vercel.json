@@ -1,3 +1,12 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+    "routes": [
+        {
+          "src": "/mailing_list_subscription/(.*)",
+          "dest": "http://ec2-13-53-37-131.eu-north-1.compute.amazonaws.com/mail_list_subscription/$1",
+          "headers": {
+            "Host": "ec2-13-53-37-131.eu-north-1.compute.amazonaws.com"
+          }
+        }
+      ]
 }

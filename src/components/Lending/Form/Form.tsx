@@ -56,8 +56,8 @@ const Form = () => {
           setQuery(response.status)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
-      setQuery(error?.response.status)
       console.log(error);
+      setQuery(error?.response?.status)
     }
     setIsLoading(false);
     setName("");
