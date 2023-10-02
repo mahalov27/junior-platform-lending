@@ -1,9 +1,16 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { useState, ChangeEvent } from "react";
 import { validationEmail } from "../../../utils/validation";
 import CustomInput from "../../CustomInput/CustomInput";
 import Loader from "../../Loader/Loader";
+import Alert from "../../Alert/Alert";
 import styles from "./Form.module.scss";
+
+type ResponseType = {
+  response: {
+    status: number
+  }
+}
 
 const Form = () => {
   const [name, setName] = useState<string>("");
@@ -11,6 +18,7 @@ const Form = () => {
   const [mailError, setMailError] = useState<boolean>(false);
   const [nameError, setNameError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [query, setQuery] = useState<number | null>(null)
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target;
@@ -37,24 +45,29 @@ const Form = () => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post(
-        "https://alexandrzhydyk.pythonanywhere.com/api/v1/accounts/mailing_list_subscription/",
+      const response: AxiosResponse <ResponseType> = await axios.post(
+        "http://ec2-13-53-37-131.eu-north-1.compute.amazonaws.com/mailing_list_subscription/",
         {
           email: mail,
           name: name,
         }
         );
-        console.log(response)
-    } catch (error) {
+        
+          setQuery(response.status)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      setQuery(error?.response.status)
       console.log(error);
     }
     setIsLoading(false);
     setName("");
     setMail("");
+    setTimeout(() => setQuery(null), 4000);
   };
 
   return (
     <div id="form" className={styles.container}>
+      {query && <Alert code={query} setState={setQuery}/>}
       <div className={styles.content}>
         <div className={styles.textBlock}>
           <h5 className={styles.title}>Ми ще на етапі розробки...</h5>

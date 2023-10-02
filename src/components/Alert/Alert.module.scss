@@ -1,0 +1,91 @@
+@use "../../utils/variables.scss" as *;
+
+.modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    .content{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100vw / 1920 * 788);
+        height: calc(100vw / 1920 * 500);
+        border-radius: calc(100vw / 1920 * 12);
+        background: $bg-white;
+        animation: anim 4s ease-in-out;
+        @keyframes anim {
+            0%{
+                opacity: 0;
+                scale: 0;
+            }
+            5%{
+                opacity: 1;
+                scale: 1;
+            }
+            97%{
+                opacity: 1;
+                scale: 1;
+            }
+            100%{
+                opacity: 0;
+                scale: 0;
+            }
+        }
+        @media (min-width: 1920px) {
+            width: 788px;
+            height: 500px;
+            border-radius: 12px;
+        }
+        .btn {
+            position: absolute;
+            top: calc(100vw / 1920 * 24);
+            right: calc(100vw / 1920 * 24);
+            width: calc(100vw / 1920 * 24);
+            height: calc(100vw / 1920 * 24);
+            border: none;
+            background: transparent;
+            @media (min-width: 1920px) {
+                top: 24px;
+                right: 24px;
+                width: 24px;
+                height: 24px;
+            }
+            &::before,
+            &::after{
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 1px;
+                top: 45%;
+                left: 1.5%;
+                background: $text-black;
+            }
+            &::before{
+                rotate: 45deg;
+            }
+            &::after{
+                rotate: -45deg;
+            }
+        }
+        .message,
+        span{
+            font-family: "Mulish", sans-serif;
+            font-size: calc(100vw / 1920 * 48);
+            color: $text-black;
+            text-align: center;
+            @media (min-width: 1920px) {
+                font-size: 48px;
+            }
+            span{
+                color: $text-green;
+            }
+        }
+    }
+}
