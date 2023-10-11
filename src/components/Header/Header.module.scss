@@ -24,9 +24,10 @@
       justify-content: center;
        width: 187px;
        height: 60px;
-       background: #D9D9D9;
-       font-size: 45px;
-       font-weight: bold;
+       background: url("../../assets/svg/3text.svg");
+       background-repeat: no-repeat;
+       background-size: 150%;
+       background-position: center;
        margin-right: 129px;
        @media (max-width: 744px) {
         width: calc(100vw / 744 * 187);
