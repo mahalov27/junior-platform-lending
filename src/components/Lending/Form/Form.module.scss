@@ -153,8 +153,14 @@
         width: calc(100vw / 414 * 374);
       }
       .input{
+        position: relative;
         height: calc(100vw / 1920 * 56);
         border-radius: calc(100vw / 1920 * 12);
+        outline:none;
+        &:focus{
+          box-shadow: 0 0 0 1px #fff;
+          border: 2px solid $bg-indigo;
+        }
         @media (min-width: 1920px) {
           height: 56px;
           border-radius: 12px;

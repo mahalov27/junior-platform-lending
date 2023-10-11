@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import styles from "./Watch.module.scss";
 
 const Watch: React.FC = () => {
-  const [days, setDays] = useState<string>('00');
+  const [days, setDays] = useState<string>("00");
   const [hours, setHours] = useState<string>("00");
   const [minutes, setMinutes] = useState<string>("00");
 
@@ -13,22 +13,22 @@ const Watch: React.FC = () => {
   }
 
   const timer = () => {
-    const coountdownDate = new Date("Octember 31, 2023 00:00:00").getTime();
+    const coountdownDate = new Date("October 31, 2023 00:00:00").getTime();
 
     intervalRef.current = setInterval(() => {
       const now = new Date().getTime();
       const distance = coountdownDate - now;
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const daysCount = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hoursCount = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutesCount = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
       if (distance < 0) {
         clearInterval(intervalRef.current);
       } else {
-        setDays(formatting(days));
-        setHours(formatting(hours));
-        setMinutes(formatting(minutes));
+        setDays(formatting(daysCount));
+        setHours(formatting(hoursCount));
+        setMinutes(formatting(minutesCount));
       }
     }, 1000);
   };

@@ -60,28 +60,10 @@
       width: 100%;
       height: calc(100vw / 1920 * 56);
       padding: 0 calc(100vw / 1920 * 16);
+      border: none;
       border-radius: calc(100vw / 1920 * 12);
       font-size:calc(100vw / 1920 * 16); 
-      color: $text-black;
-      border: solid $text-grayDark calc(100vw / 1920 * 1);
-      border: none;
-      outline: none;
-      
-      &:focus{
-        border: 2px solid $text-green;
-        &::after{
-          content: '';
-          position: absolute;
-          z-index: 5;
-          top:0;
-          left: 0;
-          display: block;
-          width: 100px;
-          height: 105px;
-          background: #fff;
-        }
-      }
-      
+      color: $text-black;     
       &::placeholder{
         color: $text-grey;
         font-weight: 600;
