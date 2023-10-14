@@ -98,25 +98,23 @@
       top: 198px;
       left: 50%;
       transform: translateX(-50%);
-      width: 996px;
+      width: 100vw;
+      text-align: center;
       font-family:"Unbounded", sans-serif;
       font-size: 40px;
       font-weight: 600;
       letter-spacing: 22px;
       @media (max-width: 1440px) {
-        width: calc(100vw / 1440 * 996);
         top: calc(100vw / 1440 * 198);
         font-size: calc(100vw / 1440 * 40);
         letter-spacing: calc(100vw / 1440 * 22);
       }
       @media (max-width: 744px) {
-        width: calc(100vw / 744 * 680);
         top: calc(100vw / 744 * 135);
         font-size: calc(100vw / 744 * 36);
         letter-spacing: calc(100vw / 744 * 9);
       }
       @media (max-width: 414px) {
-        width: calc(100vw / 414 * 374);
         top: calc(100vw / 414 * 99);
         font-size: calc(100vw / 414 * 24);
         letter-spacing: calc(100vw / 414 * 2);

@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from './NotFoundPage.module.scss'
 
 const NotFoundPage = () => {
@@ -14,9 +14,9 @@ const NotFoundPage = () => {
           <p className={styles.text}>сторінка не знайдена</p>
         </div>
         <button className={styles.linkBtn}>
-          <a href="/" className={styles.link}>
+          <Link to="/" className={styles.link}>
           На головну
-          </a>
+          </Link>
         </button>
     </div>
   )
