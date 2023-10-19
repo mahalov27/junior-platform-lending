@@ -13,8 +13,8 @@ type ResponseType = {
 }
 
 const Form = () => {
-  const [name, setName] = useState<string>("");
-  const [mail, setMail] = useState<string>("");
+  const [userName, setUserName] = useState<string>("");
+  const [userEmail, setUserEmail] = useState<string>("");
   const [mailError, setMailError] = useState<boolean>(false);
   const [nameError, setNameError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -23,9 +23,12 @@ const Form = () => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target;
     if (name === "name") {
-      setName(value);
+      if(value.length <= 24){
+        setUserName(value);
+      }
+      return
     } else {
-      setMail(value);
+      setUserEmail(value);
     }
   };
 
@@ -33,11 +36,11 @@ const Form = () => {
     e.preventDefault();
     setMailError(false);
     setNameError(false);
-    if (!validationEmail(mail) || name.length <= 2) {
-      if (!validationEmail(mail)) {
+    if (!validationEmail(userEmail) || userName.length <= 2) {
+      if (!validationEmail(userEmail)) {
         setMailError(true);
       }
-      if (name.length <= 2) {
+      if (userName.length <= 2) {
         setNameError(true);
       }
       return;
@@ -48,8 +51,8 @@ const Form = () => {
       const response: AxiosResponse <ResponseType> = await axios.post(
         "http://ec2-13-53-37-131.eu-north-1.compute.amazonaws.com/mailing_list_subscription/",
         {
-          email: mail,
-          name: name,
+          email: userName,
+          name: userEmail,
         }
         );
         
@@ -60,8 +63,8 @@ const Form = () => {
       setQuery(error?.response?.status)
     }
     setIsLoading(false);
-    setName("");
-    setMail("");
+    setUserName("");
+    setUserEmail("");
     setTimeout(() => setQuery(null), 4000);
   };
 
@@ -82,7 +85,7 @@ const Form = () => {
               label={
                 !nameError ? "" : "Ім`я має містити більше двох знаків"
               }
-              value={name}
+              value={userName}
               type={"text"}
               onChange={handleChange}
               placeholder={"Ім`я"}
@@ -92,7 +95,7 @@ const Form = () => {
             />
             <CustomInput
               label={!mailError ? "" : "Некоректний e-mail"}
-              value={mail}
+              value={userEmail}
               type={"text"}
               onChange={handleChange}
               placeholder={"E-mail"}
@@ -103,7 +106,7 @@ const Form = () => {
             <button
               className={styles.btn}
               onClick={handleSubmit}
-              disabled={name.length === 0 || mail.length === 0 ? true : false}
+              disabled={userName.length === 0 || userEmail.length === 0 ? true : false}
             >
               {isLoading ? <Loader /> : "Відправити"}
             </button>
