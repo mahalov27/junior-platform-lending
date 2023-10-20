@@ -1,48 +1,33 @@
 import axios, { AxiosResponse } from "axios";
-import { useState, ChangeEvent } from "react";
-import { validationEmail } from "../../../utils/validation";
+import { useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "Yup";
 import CustomInput from "../../CustomInput/CustomInput";
 import Loader from "../../Loader/Loader";
 import Alert from "../../Alert/Alert";
 import styles from "./Form.module.scss";
 
-type ResponseType = {
-  response: {
-    status: number
-  }
-}
-
 const Form = () => {
-  const [userName, setUserName] = useState<string>("");
-  const [userEmail, setUserEmail] = useState<string>("");
-  const [mailError, setMailError] = useState<boolean>(false);
-  const [nameError, setNameError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [query, setQuery] = useState<number | null>(null)
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { value, name } = e.target;
-    if (name === "name") {
-      if(value.length <= 24){
-        setUserName(value);
-      }
-      return
-    } else {
-      setUserEmail(value);
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: ""
+    },
+    validationSchema: Yup.object().shape({
+      name: Yup.string().min(2, "Ім`я має містити більше 2-x знаків").max(24, "Ім`я має містити не більше 24-х знаків"),
+      email: Yup.string().email("Некоректний e-mail"),
+    }),
+    onSubmit: (_ , {resetForm}) =>{
+      resetForm()
     }
-  };
+  });
 
-  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => { 
     e.preventDefault();
-    setMailError(false);
-    setNameError(false);
-    if (!validationEmail(userEmail) || userName.length <= 2) {
-      if (!validationEmail(userEmail)) {
-        setMailError(true);
-      }
-      if (userName.length <= 2) {
-        setNameError(true);
-      }
+
+    if (formik.errors.name || formik.errors.email) {
       return;
     }
 
@@ -51,8 +36,8 @@ const Form = () => {
       const response: AxiosResponse <ResponseType> = await axios.post(
         "http://ec2-13-53-37-131.eu-north-1.compute.amazonaws.com/mailing_list_subscription/",
         {
-          email: userName,
-          name: userEmail,
+          email: formik.values.name,
+          name: formik.values.email,
         }
         );
         
@@ -63,8 +48,6 @@ const Form = () => {
       setQuery(error?.response?.status)
     }
     setIsLoading(false);
-    setUserName("");
-    setUserEmail("");
     setTimeout(() => setQuery(null), 4000);
   };
 
@@ -80,33 +63,28 @@ const Form = () => {
           </p>
         </div>
         <div className={styles.formBlock}>
-          <form>
+          <form onSubmit={handleSubmit}>
             <CustomInput
-              label={
-                !nameError ? "" : "Ім`я має містити більше двох знаків"
-              }
-              value={userName}
+              label={ formik.errors.name}
+              value={formik.values.name}
               type={"text"}
-              onChange={handleChange}
+              onChange={formik.handleChange}
               placeholder={"Ім`я"}
               name={"name"}
-              requirement={nameError}
               className={styles.input}
             />
             <CustomInput
-              label={!mailError ? "" : "Некоректний e-mail"}
-              value={userEmail}
+              label={ formik.errors.email}
+              value={formik.values.email}
               type={"text"}
-              onChange={handleChange}
+              onChange={formik.handleChange}
               placeholder={"E-mail"}
               name={"email"}
-              requirement={mailError}
               className={styles.input}
             />
             <button
               className={styles.btn}
-              onClick={handleSubmit}
-              disabled={userName.length === 0 || userEmail.length === 0 ? true : false}
+              disabled={formik.values.name.length === 0 || formik.values.email.length === 0 ? true : false}
             >
               {isLoading ? <Loader /> : "Відправити"}
             </button>

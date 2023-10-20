@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import styles from "./CustomInput.module.scss"
-// import { HiddenIcon, InfoIcon, ShownIcon } from "../../assets/Icons"
 
 interface InputProps {
-  label: string
+  label: string | undefined
   type: string
-  value: string | number | readonly string[] | undefined
+  value: string 
   placeholder?: string | undefined
   disabled?: boolean | undefined
   requirement?: boolean
@@ -20,7 +19,6 @@ const CustomInput = ({
   value,
   placeholder = undefined,
   disabled = false,
-  requirement = false,
   name,
   className,
   onChange,
@@ -29,7 +27,7 @@ const CustomInput = ({
 
   return (
     <div className={styles.container}>
-      <label className={styles.title + " " + (requirement ? styles.error : "")}>{label}</label>
+      <label className={styles.title + " " + (label ? styles.error : "")}>{label}</label>
       <div className={styles.inputWrapper}>
         <input
           type={showPassword ? "text" : type}
