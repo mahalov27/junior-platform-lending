@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 import { useState } from "react";
 import { useFormik } from "formik";
-import * as Yup from "Yup";
+import * as Yup from "yup";
 import CustomInput from "../../CustomInput/CustomInput";
 import Loader from "../../Loader/Loader";
 import Alert from "../../Alert/Alert";
