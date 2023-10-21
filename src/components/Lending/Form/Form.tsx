@@ -40,7 +40,7 @@ const Form = () => {
           name: formik.values.email,
         }
         );
-        
+        console.log(response);
           setQuery(response.status)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
