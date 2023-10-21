@@ -9,7 +9,7 @@ import styles from "./Form.module.scss";
 
 const Form = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [query, setQuery] = useState<number | null>(null)
+  const [query, setQuery] = useState<number | null>(null);
   const formik = useFormik({
     initialValues: {
       name: "",
