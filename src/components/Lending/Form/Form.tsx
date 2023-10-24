@@ -17,7 +17,7 @@ const Form = () => {
     },
     validationSchema: Yup.object().shape({
       name: Yup.string().min(2, "Ім`я має містити більше 2-x знаків").max(24, "Ім`я має містити не більше 24-х знаків"),
-      email: Yup.string().email("Некоректний e-mail"),
+      email: Yup.string().email("Некоректний e-mail").matches(/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, "Некоректний e-mail"),
     }),
     onSubmit: (_ , {resetForm}) =>{
       resetForm()
