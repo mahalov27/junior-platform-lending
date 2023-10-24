@@ -36,8 +36,8 @@ const Form = () => {
       const response: AxiosResponse <ResponseType> = await axios.post(
         "http://ec2-13-53-37-131.eu-north-1.compute.amazonaws.com/mailing_list_subscription/",
         {
-          email: formik.values.name,
-          name: formik.values.email,
+          email: formik.values.email,
+          name: formik.values.name,
         }
         );
         console.log(response);
