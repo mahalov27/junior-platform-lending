@@ -9,6 +9,8 @@ RUN npm install
 
 COPY . /frontend
 
+RUN npm install @types/node --save-dev
+
 RUN npm run build
 
 # production environment
