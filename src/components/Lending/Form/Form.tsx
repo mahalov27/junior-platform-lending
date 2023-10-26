@@ -40,13 +40,17 @@ const Form = () => {
           name: formik.values.name,
         }
         );
-        console.log(response);
           setQuery(response.status)
+          
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.log(error);
       setQuery(error?.response?.status)
     }
+
+    formik.values.email = "";
+    formik.values.name = "";
+
     setIsLoading(false);
     setTimeout(() => setQuery(null), 4000);
   };
