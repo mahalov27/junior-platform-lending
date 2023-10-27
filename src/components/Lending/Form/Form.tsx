@@ -2,6 +2,8 @@ import axios, { AxiosResponse } from "axios";
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useTranslation } from "react-i18next";
+import parse from 'html-react-parser';
 import CustomInput from "../../CustomInput/CustomInput";
 import Loader from "../../Loader/Loader";
 import Alert from "../../Alert/Alert";
@@ -10,14 +12,15 @@ import styles from "./Form.module.scss";
 const Form = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [query, setQuery] = useState<number | null>(null);
+  const { t } = useTranslation();
   const formik = useFormik({
     initialValues: {
       name: "",
       email: ""
     },
     validationSchema: Yup.object().shape({
-      name: Yup.string().min(2, "Ім`я має містити більше 2-x знаків").max(24, "Ім`я має містити не більше 24-х знаків"),
-      email: Yup.string().email("Некоректний e-mail").matches(/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, "Некоректний e-mail"),
+      name: Yup.string().min(2, t("form.input.validation.name.min")).max(24, t("form.input.validation.name.max")),
+      email: Yup.string().email(t("form.input.validation.e_mail")).matches(/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, t("form.input.validation.e_mail")),
     }),
     onSubmit: (_ , {resetForm}) =>{
       resetForm()
@@ -60,10 +63,9 @@ const Form = () => {
       {query && <Alert code={query} setState={setQuery}/>}
       <div className={styles.content}>
         <div className={styles.textBlock}>
-          <h5 className={styles.title}>Ми ще на етапі розробки...</h5>
+          <h5 className={styles.title}>{t("form.title")}</h5>
           <p className={styles.text}>
-            Залишай <span>свій e-mail</span> і ми надішлемо листа, коли
-            платформа запрацює.
+            {parse(t("form.description"))}
           </p>
         </div>
         <div className={styles.formBlock}>
@@ -73,7 +75,7 @@ const Form = () => {
               value={formik.values.name}
               type={"text"}
               onChange={formik.handleChange}
-              placeholder={"Ім`я"}
+              placeholder={t("form.input.name")}
               name={"name"}
               className={styles.input}
             />
@@ -90,7 +92,7 @@ const Form = () => {
               className={styles.btn}
               disabled={formik.values.name.length === 0 || formik.values.email.length === 0 ? true : false}
             >
-              {isLoading ? <Loader /> : "Відправити"}
+              {isLoading ? <Loader /> : t("form.btn")}
             </button>
           </form>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
+import Toggler from "../Toggler/Toggler";
 import styles from "./Header.module.scss";
 
 const Header: React.FC = () => {
@@ -11,6 +12,7 @@ const Header: React.FC = () => {
       <div className={styles.wrapperNav}>
         <div><Link to="/" className={styles.logo}></Link></div>
         {pathname === "/" && <Navigation />}
+        <Toggler/>
       </div>
     </div>
   );

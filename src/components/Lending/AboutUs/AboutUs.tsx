@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { useTranslation } from "react-i18next";
+import parse from 'html-react-parser';
 import styles from "./AboutUs.module.scss";
 
 const AboutUs = () => {
@@ -9,7 +11,7 @@ const AboutUs = () => {
   const triggerRef = useRef(null);
   const flashRef = useRef(null);
   const flashTrigetRef = useRef(null);
-
+  const {t} = useTranslation()
   
   gsap.registerPlugin(ScrollTrigger);
 
@@ -83,29 +85,21 @@ const AboutUs = () => {
         <div className={styles.flash} ref={flashRef}></div>
         <div className={styles.horizontal} ref={sectionRef}>
           <div className={styles.aboutUsContent}>
-            <h1 className={styles.aboutUsTitle}>Про нас</h1>
+            <h1 className={styles.aboutUsTitle}>{t("about_us.title")}</h1>
           </div>
           <div className={styles.aboutUsContentText}>
             <div className={styles.aboutUsContentTextWrapper}>
               <p className={styles.aboutUsText}>
-                Ми - інноваційна <span>платформа</span>, яка спеціально
-                розроблена для джунів та молодих професіоналів.
+                {parse(t("about_us.content.p_first"))}
               </p>
               <p className={styles.aboutUsText}>
-                Наша мета - надати вам зручну платформу для
-                пошуку <span>команди</span> і набуття цінного{" "}
-                <span>досвіду роботи</span>.
+                {parse(t("about_us.content.p_second"))}
               </p>
               <p className={styles.aboutUsText}>
-                Ми віримо, що кожен джун має <span>потенціал</span> і мріє
-                розкритися у своїй професійній кар'єрі. Тому ми створили цей
-                продукт, щоб допомогти вам знайти свою <span>команду</span>,
-                отримати цінний досвід роботи та реалізувати свої{" "}
-                <span>ідеї</span>.
+              {parse(t("about_us.content.p_third"))}
               </p>
               <p className={styles.aboutUsText}>
-                Приєднуйтесь до <span>нас</span> і давайте разом зробимо{" "}
-                <span>крок у майбутнє</span>!
+              {parse(t("about_us.content.p_last"))}
               </p>
             </div>
           </div>

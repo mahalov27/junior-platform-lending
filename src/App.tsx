@@ -5,11 +5,12 @@ import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import MainLoader from "./components/MainLoader/MainLoader";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
+
 const App: React.FC = () => {
   const location = useLocation();
 
   return (
-    <Suspense fallback={<p><MainLoader/></p>}>
+    <Suspense fallback={<MainLoader/>}>
       <Routes key={location.pathname} location={location}>
         <Route path="/" element={<Layout />}>
           <Route index element={<AboutUsPage />} />

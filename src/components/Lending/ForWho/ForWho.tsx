@@ -1,22 +1,24 @@
+import { useTranslation } from "react-i18next";
 import styles from './ForWho.module.scss';
 
 const ForWho = () => {
+  const {t} = useTranslation()
   return (
     <div className={styles.container}>
         <section className={styles.wrapper}>
-        <h1 className={styles.title}>Для кого це може бути цікаво?</h1>
+        <h1 className={styles.title}>{t("for_who.title")}</h1>
         <div className={styles.content}>
             <div className={styles.contentItem}>
-                <h5 className={styles.itemTitle}>Не маєш досвіду</h5>
-                <p className={styles.itemText}>Наша платформа допоможе тобі набути практичний досвід, розвинути комунікативні навички та стати тобі більш конкурентоспроможним.</p>
+                <h5 className={styles.itemTitle}>{t("for_who.content.title_first")}</h5>
+                <p className={styles.itemText}>{t("for_who.content.description_first")}</p>
             </div>
             <div className={styles.contentItem}>
-                <h5 className={styles.itemTitle + " " + styles.black}>Хочеш втілити свої ідеї в життя</h5>
-                <p className={styles.itemText  + " " + styles.black}>Створи власний проєкт та знаходь команду однодумців. Це може бути звичайний пет-проєкт, або ж стартап.</p>
+                <h5 className={styles.itemTitle + " " + styles.black}>{t("for_who.content.title_second")}</h5>
+                <p className={styles.itemText  + " " + styles.black}>{t("for_who.content.description_second")}</p>
             </div>
             <div className={styles.contentItem}>
-                <h5 className={styles.itemTitle}>Можеш поділитися досвідом</h5>
-                <p className={styles.itemText}>Маєш бажання стати ментором та допомогти новачкам у найскрутніші моменти (дати консультацію чи просто пораду).</p>
+                <h5 className={styles.itemTitle}>{t("for_who.content.title_last")}</h5>
+                <p className={styles.itemText}>{t("for_who.content.description_last")}</p>
             </div>
         </div>
         </section>

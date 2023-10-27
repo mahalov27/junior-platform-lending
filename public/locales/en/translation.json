@@ -1,0 +1,75 @@
+{
+    "header": {
+        "about_us": "About us" 
+    },
+    "title": {
+        "title": "Find your team with just one click",
+        "description": "Discover the perfect project or team to bring your ideas to life",
+        "btn": "Submit Contact Form"
+    },
+    "about_us":{
+        "title": "About us",
+        "content": {
+            "p_first": "We're <span>a platform</span>, designed for young and rising professionals.",
+            "p_second": "Our goal is to help you easily find <span>the right team </span> and gain vital <span>work experience</span>.",
+            "p_third": "We see <span>great potential</span> in every junior and aim to turn their <span>career dreams</span>, into <span>reality</span>.",
+            "p_last": "<span>Join us</span>, and let's make <span>a step toward tomorrow</span>!"
+        }
+    },
+    "for_who": {
+        "title": "This is for you if",
+        "content": {
+            "title_first": "You have no experience",
+            "description_first": "Jump-start your journey with us. Gain hands-on experience, sharpen your communication skills, and elevate your market competitiveness.",
+            "title_second": "Eager to manifest your ideas",
+            "description_second": "Launch your project and rally a team of like-minded people. Whether it's a pet- project or a startup, we've got you covered.",
+            "title_last": "You can share your experience",
+            "description_last": "If mentoring appeals to you, come onboard. Assist newcomers through challenging times by providing guidance or offering helpful advice."
+        }
+    },
+    "func": {
+        "title": "What awaits you on our platform?",
+        "content": {
+            "title_first": "Ready-to-start projects",
+            "description_first": "Jump in with our ready-made project templates. We've set the foundation, allowing your team to start quickly without lengthy discussions. Each project includes a clear description and defined roles for everyone.",
+            "title_second": "Opportunity to create your own project",
+            "description_second": "Our platform empowers you to breathe life into your ideas. Build your team, and explore roles ranging from product manager to recruiter and beyond.",
+            "title_last": "Additional features",
+            "description_last": "Our collection of tools is designed to enhance your work on projects. Keep an eye out for additional details coming soon!"
+        }
+    },
+    "tape": {
+        "p": "Don't miss out on this<span>exciting journey!</span>"
+    },
+    "form": {
+        "title": "We're at the development stage...",
+        "description": " Drop <span>your email</span>, and we'll notify you once we're up and running.",
+        "input": {
+            "name": "First name",
+            "validation": {
+                "name": {
+                    "min": "The name must contain more than 2 characters",
+                    "max": "The name must contain no more than 24 characters"
+                },
+                "e_mail": "Invalid e-mail"
+            }
+        },
+        "btn": "Notify me"
+    },
+    "watch": {
+        "title": "Journey begins <span>in:</span>",
+            "content": {
+            "days": "days",
+            "hours": "hours",
+            "minutes": "minutes"
+        }
+    },
+    "footer": {
+        "title": "Design by DigitalMindsUA."
+    },
+    "alert": {
+        "ok": "Дякуємо за підписку, <br> ми Вас <span>повідомимо</span> про<br> запуск платформи",
+        "repeat": "Вибачте, юзер з<br> такою поштою вже<br> <span>очікує</span> на лист",
+        "error": "Вибачте, виникла<br> проблема. <span>Спробуйте</span><br>будь ласка пізніше"
+    }
+}

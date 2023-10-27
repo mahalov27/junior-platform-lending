@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { useTranslation } from "react-i18next";
 import styles from './Functional.module.scss';
 
 const Functional = () => {
-  const [widthVw, setWidth] = useState<number | null>(null)
+    const [widthVw, setWidth] = useState<number | null>(null)
+    const { t } = useTranslation()
     const sectionRef = useRef(null);
     const triggerRef = useRef(null);
   
@@ -49,19 +51,19 @@ const Functional = () => {
     <section className={styles.section}>
         <div className={styles.container} ref={triggerRef}>
             <div className={styles.scrollSections} ref={sectionRef}>
-                <h1 className={styles.title}>Що вас очікує на платформі?</h1>
+                <h1 className={styles.title}>{t("func.title")}</h1>
                 <div className={styles.content}>
                     <div className={styles.contentItem}>
-                        <h5 className={styles.itemTitle}>Проєкти із готовим описом</h5>
-                        <p className={styles.itemText}>Ми створили для вас кілька шаблоних пет-проєктів на вибір, щоб команда швидше почала роботу і не гаяла час на довгі обговорення.  А для полегшення процесу ми додали опис із завданнями для всіх учасників</p>
+                        <h5 className={styles.itemTitle}>{t("func.content.title_first")}</h5>
+                        <p className={styles.itemText}>{t("func.content.description_first")}</p>
                     </div>
                     <div className={styles.contentItem}>
-                        <h5 className={styles.itemTitle}>Можливість створити власний проєкт</h5>
-                        <p className={styles.itemText}>На нашій платформі ви зможете реалізувати власні ідеї, зібрати команду та спробувати себе у ролі продакт овнера, рекрутера та багатьох інших </p>
+                        <h5 className={styles.itemTitle}>{t("func.content.title_second")}</h5>
+                        <p className={styles.itemText}>{t("func.content.description_second")}</p>
                     </div>
                     <div className={styles.contentItem}>
-                        <h5 className={styles.itemTitle}>Додатковий функціонал</h5>
-                        <p className={styles.itemText}>Він значно спростить роботу над вашим проєктом, а який саме – розповімо трохи згодом…</p>
+                        <h5 className={styles.itemTitle}>{t("func.content.title_last")}</h5>
+                        <p className={styles.itemText}>{t("func.content.description_last")}</p>
                     </div>
                 </div>
             </div>

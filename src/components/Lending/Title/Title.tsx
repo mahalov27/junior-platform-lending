@@ -1,20 +1,22 @@
 import { DubleArrowIcon } from "../../../assets/Icons";
+import { useTranslation } from "react-i18next";  
 import styles from "./Title.module.scss";
 
 const Title = () => {
+  const { t } = useTranslation()
+
   return (
     <div className={styles.titleContainer}>
       <div className={styles.titleContent}>
         <h1 className={styles.mainTitle}>
-          Допоможемо знайти роботу в команді у один клік
+          {t('title.title')}
         </h1>
         <p className={styles.mainDescription}>
-          Знайди свій ідеальний пет-проєкт або команду для реалізації власної
-          ідеї
+          {t("title.description")}
         </p>
         <button className={styles.linkBtn}>
           <a href="#form" className={styles.link}>
-            Залишити контактні дані
+            {t("title.btn")}
           </a>
         </button>
       </div>
