@@ -68,8 +68,8 @@
         "title": "Design by DigitalMindsUA."
     },
     "alert": {
-        "ok": "Дякуємо за підписку, <br> ми Вас <span>повідомимо</span> про<br> запуск платформи",
-        "repeat": "Вибачте, юзер з<br> такою поштою вже<br> <span>очікує</span> на лист",
-        "error": "Вибачте, виникла<br> проблема. <span>Спробуйте</span><br>будь ласка пізніше"
+        "ok": "Thanks for subscribing! <br> We will <span>inform you</span> <br> about the launch of our platform",
+        "repeat": "Sorry, the user <br> with this email is already <br> <span>waiting</span> for the email",
+        "error": "Sorry, the <br> problem occured. Please, <span>try again</span><br>later"
     }
 }
