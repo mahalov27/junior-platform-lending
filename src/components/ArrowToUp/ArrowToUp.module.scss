@@ -1,0 +1,25 @@
+.navUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 2%;
+    bottom: 3%;
+    z-index: 5;
+    opacity: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #00000080;
+    transition: 1s;
+    cursor: pointer; 
+    overflow: hidden;
+  }
+  .arrowUp {
+    opacity: 1;
+  }    
+  .iconArrow {
+    opacity: 1; 
+    border-radius: 50% 50% 50% 50% / 76% 73% 27% 24%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }

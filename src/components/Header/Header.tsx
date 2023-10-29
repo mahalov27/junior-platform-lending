@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.wrapperNav}>
-        <div><Link to="/" className={styles.logo}></Link></div>
+        <Link to="/" className={styles.logo}></Link>
         {pathname === "/" && <Navigation />}
         <Toggler/>
       </div>
