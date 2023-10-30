@@ -16,7 +16,7 @@
   }
   @media (max-width: 414px) {
     height: 60px;
-    padding: 0 calc(100vw / 414 * 10);
+    padding: 0 calc(100vw / 414 * 10) 0 calc(100vw / 414 * 17);
   }
   .wrapperNav{
     display: flex;
@@ -40,10 +40,10 @@
         margin-right: calc(100vw / 744 * 80);
       }
        @media (max-width: 414px) {
-        width: calc(100vw / 414 * 100);
+        width: calc(100vw / 414 * 115);
         height: 50px;
         font-size: 40px;
-        margin-right: calc(100vw / 414 * 40);
+        margin-right: calc(100vw / 414 * 30);
       }
     }
   }
