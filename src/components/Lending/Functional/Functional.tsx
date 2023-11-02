@@ -16,7 +16,7 @@ const Functional = () => {
 
       !widthVw && setWidth(window.innerWidth)
 
-      if( widthVw !== null && widthVw > 744) {
+      if( widthVw !== null && widthVw > 1024) {
 
         const pin = gsap.fromTo(
           sectionRef.current,

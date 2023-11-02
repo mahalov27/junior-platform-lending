@@ -13,6 +13,9 @@
   @media (max-width: 1280px) {
     height: calc(100vw / 1280 * 869);
   }
+  @media (max-width: 1024px) {
+    height: calc(100vw / 1024 * 1876  );
+  }
   @media (max-width: 744px) {
     height: calc(100vw / 744 * 1846);
   }
@@ -50,6 +53,11 @@
         font-size: calc(100vw / 1280 * 48);
         margin: calc(100vw / 1280 * 80) 0 calc(100vw / 1280 * 40) calc(100vw / 1280 * 192);
       }
+      @media (max-width: 1024px) {
+        width: calc(100vw / 1024 * 330);
+        font-size: calc(100vw / 1024 * 40);
+        margin: calc(100vw / 1024 * 80) 0 calc(100vw / 1024 * 40) calc(100vw / 1024 * 241);
+      }
       @media (max-width: 744px) {
         width: calc(100vw / 744 * 268);
         font-size: calc(100vw / 744 * 32);
@@ -78,8 +86,12 @@
       @media (max-width: 1280px) {
         width: calc(100vw / 1280 * 1080);
       }
-      @media (max-width: 744px) {
+      @media (max-width: 1024px) {
         flex-direction: column;
+        width: calc(100vw / 1024 * 494);
+        height:calc(100vw / 1024 * 1520);
+      }
+      @media (max-width: 744px) {
         width: calc(100vw / 744 * 494);
         height:calc(100vw / 744 * 1520);
       }
@@ -109,6 +121,13 @@
           width: calc(100vw / 1280 * 344);
           height: calc(100vw / 1280 * 483);
           padding: calc(100vw / 1280 * 123) calc(100vw / 1280 * 32) 0;
+        }
+        @media (max-width: 1024px) {
+          padding: calc(100vw / 1024 * 157) calc(100vw / 1024 * 75);
+          height: calc(100vw / 1024 * 480);
+          width: calc(100vw / 1024 * 494);
+          border-radius: calc(100vw / 1024 * 100);
+          padding: calc(100vw / 1024 * 125) calc(100vw / 1024 * 92) 0;
         }
         @media (max-width: 744px) {
           padding: calc(100vw / 744 * 157) calc(100vw / 744 * 75);
@@ -142,6 +161,9 @@
           @media (max-width: 1280px) {
             background-image: url(../../../assets/svg/cardGreenLeft@1280.svg);
           }
+          @media (max-width: 1024px) {
+            background-image: url(../../../assets/svg/cardGreen@744.svg);
+          }
           @media (max-width: 744px) {
             background-image: url(../../../assets/svg/cardGreen@744.svg);
           }
@@ -170,6 +192,11 @@
             padding-top: calc(100vw / 1280 * 38);
             height: calc(100vw / 1280 * 398);
           }
+          @media (max-width: 1024px) {
+            background-image: url(../../../assets/svg/cardWhite@744.svg);
+            padding: calc(100vw / 1024 * 125) calc(100vw / 1024 * 80) 0;
+            height: calc(100vw / 1024 * 480);
+          }
           @media (max-width: 744px) {
             background-image: url(../../../assets/svg/cardWhite@744.svg);
             padding: calc(100vw / 744 * 148) calc(100vw / 744 * 92) 0;
@@ -195,6 +222,9 @@
           @media (max-width: 1280px) {
             background-image: url(../../../assets/svg/cardGreenRight@1280.svg);
           }
+          @media (max-width: 1024px) {
+            background-image: url(../../../assets/svg/cardGreen@744.svg);
+          }
           @media (max-width: 744px) {
             background-image: url(../../../assets/svg/cardGreen@744.svg);
           }
@@ -219,6 +249,10 @@
             font-size: calc(100vw / 1280 * 32);
             margin-bottom: calc(100vw / 1280 * 16);
           }
+          @media (max-width: 1024px) {
+            font-size: calc(100vw / 1024 * 32);
+            margin-bottom: calc(100vw / 1024 * 16);
+          }
           @media (max-width: 744px) {
             font-size: calc(100vw / 744 * 32);
             margin-bottom: calc(100vw / 744 * 16);
@@ -240,6 +274,9 @@
           }
           @media (max-width: 1280px) {
             font-size: calc(100vw / 1280 * 18);
+          }
+          @media (max-width: 1024px) {
+            font-size: calc(100vw / 1024 * 18);
           }
           @media (max-width: 744px) {
             font-size: calc(100vw / 744 * 20);
