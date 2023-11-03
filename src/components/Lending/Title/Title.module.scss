@@ -28,6 +28,9 @@
     @media (max-width: 1280px) {
       width: calc(100vw / 1280 * 1080);
     }
+    @media (max-width: 1024px) {
+      width: calc(100vw / 1024 * 823);
+    }
     @media (max-width: 744px) {
       width: calc(100vw / 744 * 665);
     }
@@ -55,6 +58,10 @@
         font-size: calc(100vw / 1280 * 48);
         margin-bottom: calc(100vw / 1280 * 24);
       }
+      @media (max-width: 1024px) {
+        font-size: calc(100vw / 1024 * 40);
+        margin-bottom: calc(100vw / 1024 * 24);
+      }
       @media (max-width: 744px) {
         font-size: calc(100vw / 744 * 32);
         margin-bottom: calc(100vw / 744 * 24);
@@ -81,6 +88,10 @@
       @media (max-width: 1280px) {
         font-size: calc(100vw / 1280 * 24);
         margin-bottom: calc(100vw / 1280 * 56);
+      }
+      @media (max-width: 1024px) {
+        font-size: calc(100vw / 1024 * 20);
+        margin-bottom: calc(100vw / 1024 * 80);
       }
       @media (max-width: 744px) {
         font-size: calc(100vw / 744 * 18);
@@ -118,6 +129,12 @@
         font-size: calc(100vw / 1280 * 20); 
         border-radius: calc(100vw / 1280 * 8);
       }
+      @media (max-width: 1024px) {
+        width: calc(100vw / 1024 * 311);
+        height: calc(100vw / 1024 * 52);
+        font-size: calc(100vw / 1024 * 20); 
+        border-radius: calc(100vw / 1024 * 8);
+      }
       @media (max-width: 744px) {
         width: calc(100vw / 744 * 311);
         height: calc(100vw / 744 * 52);
@@ -149,6 +166,16 @@
           width: calc(100vw / 1440 * 319);
           height: calc(100vw / 1440 * 60);
           border-radius: calc(100vw / 1440 * 12);
+        }
+        @media (max-width: 1280px) {
+          width: calc(100vw / 1280 * 319);
+          height: calc(100vw / 1280 * 60);
+          border-radius: calc(100vw / 1280 * 12);
+        }
+        @media (max-width: 1024px) {
+          width: calc(100vw / 1024 * 319);
+          height: calc(100vw / 1024 * 60);
+          border-radius: calc(100vw / 1024 * 12);
         }
         @media (max-width: 744px) {
           width: calc(100vw / 744 * 319);
@@ -205,6 +232,9 @@
         }
         @media (max-width: 1280px) {
           font-size: calc(100vw / 1280 * 20);
+        }
+        @media (max-width: 1024px) {
+          font-size: calc(100vw / 1024 * 20);
         }
         @media (max-width: 744px) {
           font-size: calc(100vw / 744 * 20);

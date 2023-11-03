@@ -33,6 +33,12 @@
        background-size: 150%;
        background-position: center;
        margin-right: 129px;
+       @media (max-width: 1024px) {
+        width: calc(100vw / 1024 * 187);
+        height: 50px;
+        font-size: 40px;
+        margin-right: calc(100vw / 1024 * 129);
+      }
        @media (max-width: 744px) {
         width: calc(100vw / 744 * 187);
         height: 50px;

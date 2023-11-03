@@ -16,7 +16,7 @@ const Watch: React.FC = () => {
   }
 
   const timer = () => {
-    const coountdownDate = new Date("October 31, 2023 00:00:00").getTime();
+    const coountdownDate = new Date("December 31, 2023 00:00:00").getTime();
 
     intervalRef.current = setInterval(() => {
       const now = new Date().getTime();

@@ -21,7 +21,7 @@ const Layout: React.FC = () => {
 
   return (
     <>
-      {widthVw && widthVw <= 744 && <ArrowToUp/>}
+      {widthVw && widthVw <= 1024 && <ArrowToUp/>}
       <Header />
       <Background/>
       <main>
