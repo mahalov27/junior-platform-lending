@@ -10,7 +10,6 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #00000080;
     cursor: pointer; 
     overflow: hidden;
     transition: 1s;
@@ -20,6 +19,4 @@
   }    
   .iconArrow {
     opacity: 1; 
-    border-radius: 50% 50% 50% 50% / 76% 73% 27% 24%;
-    background-color: rgba(255, 255, 255, 0.5);
   }

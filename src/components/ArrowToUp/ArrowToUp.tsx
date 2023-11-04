@@ -17,7 +17,7 @@ const ArrowToUp = () => {
         className={styles.navUp + " " + (active && styles.arrowUp)}
         onClick={toUpPage}
       >
-        <ToUpIcon style={{fill: "#1E9F7180", width: "20px", height: "20px"}} />
+        <ToUpIcon style={{fill: "#1E9F7190", width: "45px", height: "45px"}} />
       </div>
     </>
   );
