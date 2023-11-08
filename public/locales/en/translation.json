@@ -71,5 +71,9 @@
         "ok": "Thanks for subscribing! <br> We will <span>inform you</span> <br> about the launch of our platform",
         "repeat": "Sorry, the user <br> with this email is already <br> <span>waiting</span> for the email",
         "error": "Sorry, the <br> problem occured. Please, <span>try again</span><br>later"
+    },
+    "404": {
+        "title": "page not found",
+        "btn": "To main page"
     }
 }
