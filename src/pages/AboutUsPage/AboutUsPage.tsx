@@ -6,13 +6,11 @@ import Tape from '../../components/Lending/Tape/Tape';
 import Form from '../../components/Lending/Form/Form';
 import Watch from '../../components/Lending/Watch/Watch';
 import styles from './AboutUsPage.module.scss';
-import Snowfall from '../../components/Snowfall/Snowfall';
 
 const AboutUsPage = () => {
 
   return (
     <div className={styles.container}>
-      <Snowfall />
       <Title/>
       <AboutUs />
       <ForWho />
